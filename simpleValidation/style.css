@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    border-radius: 5px;
+}
+
+
+.send-button:hover {
+    cursor: pointer;
+}
+
+input:valid {
+    outline: 3px solid #0ddb0d;
+}
+
+.hint {
+    font-size: small;
+    color: #4e4e10;
+    font-style: italic;
+}

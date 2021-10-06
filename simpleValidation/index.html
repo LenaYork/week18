@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая валидация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" class="container">
+        <div class="form-item">
+            <label for="name">Ваше имя: </label>
+            <input type="text" name="name" minlength="2" maxlength="20" pattern="^[a-zA-Zа-яёА-ЯЁ]+$" required>
+            <p class="hint">Имя должно состоять только из букв</p>
+        </div>
+
+        <div class="form-item">
+            <label for="phone">Ваш телефон: </label>
+            <input type="number" name = "phone" required >
+            <p class="hint">Номер телефона должен быть в международном формате, но без символа +</p>
+        </div>
+
+        <div class="form-item">
+            <label for="email">Ваш email: </label>
+            <input type="email" name="email" required>
+            <p class="hint">В адресе должен быть символ @ и точка перед именем домена</p>
+        </div>
+        
+        <button class="send-button">Отправить</button>
+    </form>
+</body>
+</html>
