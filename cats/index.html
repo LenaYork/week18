@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник для владельциц котеек</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <h1>Важный опрос для владелиц котиков!</h1>
+        <p class="description">Примите участие в очень важном опросе, просто ответьте на вопросы</p>
+        <form action="dosmth.php" method="post" class="form">
+            <div class="user-answer">
+                <label for="nickname">Кличка вашего питомца:</label>
+                <input type="text" id="nickname" placeholder="Пушистик">
+            </div>
+    
+            <div class="user-answer">
+                <label for="owner-name">Имя владельца:</label>
+                <input type="text" id="owner-name" placeholder="Иннокентий">
+            </div>
+    
+            <div class="user-answer">
+                <label for="owner-contacts">Контакты владельца:</label>
+                <input type="text" id="owner-contacts" placeholder="+799955544433">
+            </div>
+    
+            <div class="user-answer">
+                <label for="breed">Порода вашей кошки:</label>
+                <select name="breed" id="breed">
+                    <option value="siamese">Сиамская</option>
+                    <option value="sphynks">Сфинкс</option>
+                    <option value="mainecoon" selected>Мейнкун</option>
+                    <option value="noblewoman">Дворянская</option>
+                    <option value="oriental">Ориентал</option>
+                    <option value="siberian">Сибирская</option>
+                    <option value="brirish">Британская</option>
+                    <option value="persian">Персидская</option>
+                    <option value="bengal">Бенгальская</option>
+                    <option value="russian">Русская</option>
+                </select>
+            </div>
+    
+            <div class="user-answer">
+                <p class="food">Чем питается ваша кошка?</p>
+                <div class="answer-item">
+                    <input type="checkbox" name="food" value="dry" id="dry">
+                    <label for="dry">Сухой корм</label>
+                </div>
+                
+                <div class="answer-item">
+                    <input type="checkbox" name="food" value="wet" id="wet">
+                    <label for="wet">Влажный корм</label>
+                </div>
+                
+                <div class="answer-item">
+                    <input type="checkbox" name="food" value="natural">
+                    <label for="natural">Натуральный корм</label>
+                </div>
+
+                <div class="answer-item">
+                    <input type="checkbox" name="food" value="mixed" checked>
+                    <lavel for="mixed">Комбинированный корм</lavel>
+                </div>
+            </div>
+    
+            <div class="user-answer">
+                <p class="gender">Какого пола ваш питомец?</p>
+                
+                <div class="answer-item">
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Кошка</label>
+                </div>
+            
+                <div class="answer-item">
+                    <input type="radio" name="gender" id="male">
+                    <label for="cat">Кот</label>
+                </div>
+
+                <div class="answer-item">
+                    <input type="radio" name="gender" id="unknown">
+                    <label for="unknown">Мой питомец еще не определился</label>
+                </div>
+            </div>
+    
+            <div class="user-answer">
+                <p>Ваш комментарий:</p>
+                <textarea name="comment" id="comment" cols="30" rows="10"
+                    placeholder="Напишите тут все, что считаете нужным:)"></textarea>
+            </div>
+    
+            <div class="user-answer">
+                <label for="cat-pic">Добавьте фото вашей котейки</label>
+                <input type="file" id="cat-pic" accept=".jpg,.jpeg">
+            </div>
+    
+            <div>
+                <button type="submit" value="Сохранить">Отправить</button>
+            </div>
+    
+        </form>
+    </main>
+    
+</body>
+
+</html>
