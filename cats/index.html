@@ -16,16 +16,16 @@
         <form class="form">
             <div class="user-answer">
                 <label for="nickname">Кличка вашего питомца:</label>
-                <input type="text" id="nickname" placeholder="Пушистик" minlength="3" required>
+                <input type="text" id="nickname" placeholder="Пушистик" minlength="3" pattern="^[a-zA-Zа-яёА-ЯЁ]+$" required>
                 <!-- <div class="errors" id="nicknameError"></div> -->
-                <div class="hint">Имя должно быть не меньше трех символов</div>
+                <div class="hint">Имя должно быть не меньше трех символов и на русском языке</div>
             </div>
     
             <div class="user-answer">
                 <label for="owner-name">Имя владельца:</label>
-                <input type="text" id="owner-name" placeholder="Иннокентий" minlength="3" required>
+                <input type="text" id="owner-name" placeholder="Иннокентий" minlength="3" pattern="^[a-zA-Zа-яёА-ЯЁ]+$" required>
                 <!-- <div class="errors" id="owner-nameError"></div> -->
-                <div class="hint">Имя должно быть не меньше трех символов</div>
+                <div class="hint">Имя должно быть не меньше трех символов и на русском языке</div>
             </div>
     
             <div class="user-answer">
