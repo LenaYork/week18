@@ -21,3 +21,30 @@ h1, .description {
     display: flex;
     flex-direction: row;
 }
+
+.button:hover {
+    cursor: pointer;
+}
+
+input:valid {
+    border: 3px solid green;
+    /* outline: none; */
+}
+
+.errors {
+    color: red;
+    font-size: larger;
+    font-style: bold;
+}
+
+.noErrors {
+    color: green;
+    font-style: bold;
+    font-size: larger;
+}
+
+.hint {
+    font-size: smaller;
+    font-style: italic;
+    color: #35350a;
+}

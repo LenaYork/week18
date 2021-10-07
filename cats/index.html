@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опросник для владельциц котеек</title>
+    <title>Опросник для владелиц котеек</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,28 +13,34 @@
     <main class="main">
         <h1>Важный опрос для владелиц котиков!</h1>
         <p class="description">Примите участие в очень важном опросе, просто ответьте на вопросы</p>
-        <form action="dosmth.php" method="post" class="form">
+        <form class="form">
             <div class="user-answer">
                 <label for="nickname">Кличка вашего питомца:</label>
-                <input type="text" id="nickname" placeholder="Пушистик">
+                <input type="text" id="nickname" placeholder="Пушистик" minlength="3" required>
+                <!-- <div class="errors" id="nicknameError"></div> -->
+                <div class="hint">Имя должно быть не меньше трех символов</div>
             </div>
     
             <div class="user-answer">
                 <label for="owner-name">Имя владельца:</label>
-                <input type="text" id="owner-name" placeholder="Иннокентий">
+                <input type="text" id="owner-name" placeholder="Иннокентий" minlength="3" required>
+                <!-- <div class="errors" id="owner-nameError"></div> -->
+                <div class="hint">Имя должно быть не меньше трех символов</div>
             </div>
     
             <div class="user-answer">
                 <label for="owner-contacts">Контакты владельца:</label>
-                <input type="text" id="owner-contacts" placeholder="+799955544433">
+                <input type="number" id="owner-contacts" placeholder="+799955544433" required>
+                <!-- <div class="errors" id="owner-contactsError"></div> -->
             </div>
     
             <div class="user-answer">
                 <label for="breed">Порода вашей кошки:</label>
-                <select name="breed" id="breed">
+                <select name="breed" id="breed" required="required">
+                    <option value="choose" selected disabled>выберите породу</option>
                     <option value="siamese">Сиамская</option>
                     <option value="sphynks">Сфинкс</option>
-                    <option value="mainecoon" selected>Мейнкун</option>
+                    <option value="mainecoon">Мейнкун</option>
                     <option value="noblewoman">Дворянская</option>
                     <option value="oriental">Ориентал</option>
                     <option value="siberian">Сибирская</option>
@@ -63,7 +69,7 @@
                 </div>
 
                 <div class="answer-item">
-                    <input type="checkbox" name="food" value="mixed" checked>
+                    <input type="checkbox" name="food" value="mixed">
                     <lavel for="mixed">Комбинированный корм</lavel>
                 </div>
             </div>
@@ -72,7 +78,7 @@
                 <p class="gender">Какого пола ваш питомец?</p>
                 
                 <div class="answer-item">
-                    <input type="radio" name="gender" id="female">
+                    <input type="radio" name="gender" id="female" required>
                     <label for="female">Кошка</label>
                 </div>
             
@@ -95,16 +101,18 @@
     
             <div class="user-answer">
                 <label for="cat-pic">Добавьте фото вашей котейки</label>
-                <input type="file" id="cat-pic" accept=".jpg,.jpeg">
+                <input type="file" id="cat-pic" accept=".jpg,.jpeg" class="button" required>
             </div>
     
             <div>
-                <button type="submit" value="Сохранить">Отправить</button>
+                <button type="submit" value="Сохранить" id="send" class="button">Отправить</button>
             </div>
     
         </form>
+        <div class="errors" id="errors"></div>
+        <div class="noErrors" id="noErrors"></div>
     </main>
-    
+    <!-- <script src="main.js"></script> -->
 </body>
 
 </html>
