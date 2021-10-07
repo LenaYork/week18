@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <h1>Форма регистрации</h1>
+    <h3>Введите ваши данные</h3>
+    <div class="form-container">
+
+        <form class="form-item">
+            <label for="userName">Ваше имя: </label>
+            <input type="text" name="userName" id="userName" minlength="2" maxlength="15" required>
+        </form>
+        
+        <div class="form-item">
+            <label for="userSurname">Ваша фамилия: </label>
+            <input type="text" name="userSurname" id="userSurname" minlength="2" "maxlength="30" required>
+        </div>
+        
+        <div class="form-item">
+            <label for="userEmail">Ваш email: </label>
+            <input type="email" name="userEmail" id="userEmail" required>
+        </div>
+
+        <div class="form-item">
+            <label for="userPhone">Ваш номер телефона: </label>
+            <input type="text" name="userPhone" id="userPhone" maxlength="12" required>
+        </div>
+        
+        <div class="form-item">
+            <p>Ваш пол: </p>
+            <div class="genders">
+                <div class="gender">
+                    <input type="radio" name="userGender" id="userFemale">
+                    <label for="userFemale">женский </label>
+                </div>
+
+                <div class="gender"> 
+                    <input type="radio" name="userGender" id="userMale">
+                    <label for="userMale">мужской </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label for="userPassword1">Придумайте пароль: </label>
+            <input type="password" name="userPassword1" id="userPassword1" required>
+        </div>
+
+        <div class="form-item">
+            <label for="userPassword2">Продублируйте пароль: </label>
+            <input type="password" name="userPassword2" id="userPassword2" required>
+        </div>
+
+        <div class="form-item confirm-item">
+            <input type="checkbox" name="confirmation" id="confirm" required>
+            <label for="confirmation">Я согласна(сен) с условиями пользования сервисом</label>
+            
+        </div>
+        
+        <button type="submit" id="register" disabled>Зарегистрироваться</button>
+
+        <div class="errorMessage" id="errorMessage"></div>
+        <div class="welcome" id="welcome"></div>
+
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
