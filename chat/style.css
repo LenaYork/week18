@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    width: 600px;
+    height: 95vh;
+    margin: 0 auto;
+    border: 2px solid green;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.messages {
+    width: 100%;
+}
+
+.send-area {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+}
+
+.user-input {
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+}
+
+.send-button {
+    background-color: #069c06;
+    border-radius: 15px;
+}
+
+.send-button:hover {
+    cursor: pointer;
+    background-color: #045a04;
+}
+
+.send-button:active {
+    background-color: #12d412;
+}
+
+.disabled {
+    background-color: #488548;
+    color: silver;
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+    background-color: #71d671;
+}
+
+.author {
+    color: green;
+    font-size: larger;
+    font-style: bold; 
+}
